@@ -63,15 +63,6 @@ const books = [
 export default function BookSection() {
   return (
     <div className="container mx-auto px-4 relative py-24">
-      <div className="text-center max-w-3xl mx-auto mb-16">
-        <h2 className="text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
-          Published Works
-        </h2>
-        <p className="text-xl text-gray-600">
-          Science-Backed Natural Remedies - Dr. Klein's books have helped many to understand and implement evidence-based natural medicine.
-        </p>
-      </div>
-      
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {books.map((book, index) => (
           <Link 

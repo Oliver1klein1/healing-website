@@ -25,8 +25,8 @@ export default function Testimonials() {
         <h2 className="text-4xl font-bold text-center mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
           Patient Testimonials
         </h2>
-        <p className="text-center text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
-          Real stories from people who have transformed their health through the wisdom in Dr Klein's books.
+        <p className="text-center text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
+          Real stories from people who have transformed their health through the wisdom in these books.
         </p>
         <div className="grid md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (

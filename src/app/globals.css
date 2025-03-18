@@ -59,6 +59,9 @@
   --accent: #48BB78;
   --background: #FFFFFF;
   --text: #2D3748;
+  --first-color: rgba(59, 130, 246, 1);
+  --second-color: rgba(147, 51, 234, 1);
+  --third-color: rgba(59, 130, 246, 1);
 }
 
 @layer base {
@@ -127,6 +130,78 @@
   }
 }
 
+@keyframes first {
+  0% { transform: translate(-50%, -50%) rotate(0deg) scale(1); }
+  25% { transform: translate(-50%, -50%) rotate(90deg) scale(1.5); }
+  50% { transform: translate(-50%, -50%) rotate(180deg) scale(1); }
+  75% { transform: translate(-50%, -50%) rotate(270deg) scale(1.5); }
+  100% { transform: translate(-50%, -50%) rotate(360deg) scale(1); }
+}
+
+@keyframes second {
+  0% { transform: translate(-50%, -50%) rotate(0deg) scale(1.5); }
+  25% { transform: translate(-50%, -50%) rotate(-90deg) scale(1); }
+  50% { transform: translate(-50%, -50%) rotate(-180deg) scale(1.5); }
+  75% { transform: translate(-50%, -50%) rotate(-270deg) scale(1); }
+  100% { transform: translate(-50%, -50%) rotate(-360deg) scale(1.5); }
+}
+
+@keyframes third {
+  0% { transform: translate(-50%, -50%) rotate(0deg) scale(1); }
+  25% { transform: translate(-50%, -50%) rotate(90deg) scale(1.5); }
+  50% { transform: translate(-50%, -50%) rotate(180deg) scale(1); }
+  75% { transform: translate(-50%, -50%) rotate(270deg) scale(1.5); }
+  100% { transform: translate(-50%, -50%) rotate(360deg) scale(1); }
+}
+
+.animate-first {
+  animation: first 15s linear infinite;
+}
+
+.animate-second {
+  animation: second 20s linear infinite;
+}
+
+.animate-third {
+  animation: third 18s linear infinite;
+}
+
 .section {
   @apply py-16 md:py-24;
+}
+
+@keyframes gradient-orb-1 {
+  0% { transform: translate(-50%, -50%) rotate(0deg) scale(1); }
+  25% { transform: translate(-50%, -50%) rotate(90deg) scale(1.5); }
+  50% { transform: translate(-50%, -50%) rotate(180deg) scale(1); }
+  75% { transform: translate(-50%, -50%) rotate(270deg) scale(1.5); }
+  100% { transform: translate(-50%, -50%) rotate(360deg) scale(1); }
+}
+
+@keyframes gradient-orb-2 {
+  0% { transform: translate(-50%, -50%) rotate(0deg) scale(1.5); }
+  25% { transform: translate(-50%, -50%) rotate(-90deg) scale(1); }
+  50% { transform: translate(-50%, -50%) rotate(-180deg) scale(1.5); }
+  75% { transform: translate(-50%, -50%) rotate(-270deg) scale(1); }
+  100% { transform: translate(-50%, -50%) rotate(-360deg) scale(1.5); }
+}
+
+@keyframes gradient-orb-3 {
+  0% { transform: translate(-50%, -50%) rotate(0deg) scale(1); }
+  25% { transform: translate(-50%, -50%) rotate(90deg) scale(1.5); }
+  50% { transform: translate(-50%, -50%) rotate(180deg) scale(1); }
+  75% { transform: translate(-50%, -50%) rotate(270deg) scale(1.5); }
+  100% { transform: translate(-50%, -50%) rotate(360deg) scale(1); }
+}
+
+.animate-gradient-orb-1 {
+  animation: gradient-orb-1 15s linear infinite;
+}
+
+.animate-gradient-orb-2 {
+  animation: gradient-orb-2 20s linear infinite;
+}
+
+.animate-gradient-orb-3 {
+  animation: gradient-orb-3 18s linear infinite;
 }
