@@ -6,17 +6,27 @@ import matter from 'gray-matter';
 import { remark } from 'remark';
 import html from 'remark-html';
 import Features from '@/components/Features';
+import LoadingScreen from '@/components/LoadingScreen';
 
 // Function to get all book slugs
 export async function generateStaticParams() {
-  const booksDirectory = path.join(process.cwd(), 'public/content/books');
-  const filenames = fs.readdirSync(booksDirectory);
-  
-  return filenames
-    .filter(filename => filename.endsWith('.md'))
-    .map(filename => ({
-      slug: filename.replace(/\.md$/, ''),
-    }));
+  try {
+    const booksDirectory = path.join(process.cwd(), 'public/content/books');
+    if (!fs.existsSync(booksDirectory)) {
+      console.warn('Books directory does not exist:', booksDirectory);
+      return [];
+    }
+    
+    const filenames = fs.readdirSync(booksDirectory);
+    return filenames
+      .filter(filename => filename.endsWith('.md'))
+      .map(filename => ({
+        slug: filename.replace(/\.md$/, ''),
+      }));
+  } catch (error) {
+    console.error('Error generating static params:', error);
+    return [];
+  }
 }
 
 // Function to get book content
@@ -61,9 +71,11 @@ export default async function BookPage({ params }: { params: { slug: string } })
 
   return (
     <>
+      <LoadingScreen />
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-blue-50 to-purple-50">
-        <div className="max-w-6xl mx-auto py-12 md:py-16">
+      <section className="relative bg-gradient-to-b from-blue-900 to-purple-900">
+        <div className="absolute inset-0 bg-[url('/grid.png')] opacity-20"></div>
+        <div className="max-w-6xl mx-auto py-12 md:py-16 relative">
           <div className="flex items-center justify-center gap-6 md:gap-8">
             <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
               <Image
@@ -75,7 +87,7 @@ export default async function BookPage({ params }: { params: { slug: string } })
                 priority
               />
             </div>
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900">
+            <h1 className="text-3xl md:text-4xl font-bold text-white">
               Bridging Science & Natural Medicine
             </h1>
             <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
