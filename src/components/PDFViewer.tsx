@@ -94,8 +94,8 @@ export default function PDFViewer({ url }: PDFViewerProps) {
       ref={containerRef}
       className={`w-full mx-auto transition-all duration-300 ${
         isFullscreen 
-          ? 'fixed inset-0 z-[100] bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 p-4 overflow-auto flex flex-col items-center justify-center' 
-          : 'max-w-4xl bg-purple-50 p-4 rounded-lg'
+          ? 'fixed inset-0 z-[100] bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 p-8 overflow-auto flex flex-col items-center justify-start' 
+          : 'max-w-4xl'
       }`}
     >
       <Document

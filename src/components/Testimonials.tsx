@@ -1,8 +1,13 @@
 const testimonials = [
   {
-    quote: "Dr. Klein's natural remedies helped me overcome my chronic digestive issues when nothing else worked. His scientific approach gave me confidence in the treatment.",
+    quote: "The simple and cost-effective remedies helped me overcome my chronic digestive issues when nothing else worked. I loved the fact that almost every statement in the book has a referenced paper to back it up. Made me confidence in the treatment.",
     author: "Sarah Thompson",
-    title: "Recovered Patient"
+    title: "Verified Reader"
+  },
+  {
+    quote: "After years of expensive treatments, these well-researched affordable natural solutions finally gave me relief from my skin problems. I should have listened more closely to my gran. I'm forever grateful.",
+    author: "Sarah Thompson",
+    title: "Verified Reader"
   },
   {
     quote: "The protocols in his books are easy to follow and actually work. I've seen remarkable improvements in my energy levels and overall health.",

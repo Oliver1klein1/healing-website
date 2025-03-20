@@ -1,11 +1,14 @@
+'use client';
+
 import Image from 'next/image';
 import Link from 'next/link';
+import { StarIcon } from '@heroicons/react/20/solid';
 
 const books = [
   {
     title: 'Heal Your Gut Naturally',
     subtitle: '17 Steps to Banish Stomach Pain, Indigestion and Bloating',
-    image: '/books/heal-your-gut.jpg',
+    cover: '/images/books/heal-your-gut.jpg',
     slug: 'heal-your-gut',
     rating: 4.9,
     reviews: 120,
@@ -13,48 +16,48 @@ const books = [
   {
     title: '7 Steps to Optimize Your Microbiome',
     subtitle: 'And Why You Need To',
-    image: '/books/optimize-microbiome.jpg',
+    cover: '/images/books/optimize-microbiome.jpg',
     slug: 'optimize-microbiome',
     rating: 4.9,
-    reviews: 120,
+    reviews: 240,
   },
   {
     title: '17 Steps to Combat Colds & Flu',
     subtitle: 'Using Science-Backed Natural Remedies',
-    image: '/books/combat-colds.jpg',
+    cover: '/images/books/combat-colds.jpg',
     slug: 'combat-colds',
     rating: 4.9,
-    reviews: 120,
+    reviews: 238,
   },
   {
-    title: '101 Jaw-Dropping Fun Facts',
-    subtitle: 'About the Pineal Gland',
-    image: '/books/pineal-gland.jpg',
-    slug: 'pineal-gland',
-    rating: 4.9,
-    reviews: 120,
+    title: '101 Jaw-Dropping and Fun Facts About The Pineal Gland',
+    subtitle: '',
+    cover: '/images/books/pineal-trivia.jpg',
+    slug: 'pineal-trivia',
+    rating: 4.8,
+    reviews: 85,
   },
   {
     title: 'Microbiome Trivia',
-    subtitle: 'Amazing Facts About Your Gut Health',
-    image: '/books/microbiome-trivia.jpg',
+    subtitle: '101 Astonishing Facts About Your Gut – Your Second Brain',
+    cover: '/images/books/microbiome-trivia.jpg',
     slug: 'microbiome-trivia',
-    rating: 4.8,
+    rating: 4.7,
     reviews: 95,
   },
   {
-    title: 'Pineal Trivia',
-    subtitle: 'Fascinating Facts About Your Third Eye',
-    image: '/books/pineal-trivia.jpg',
-    slug: 'pineal-trivia',
-    rating: 4.8,
-    reviews: 88,
+    title: '5 Steps To Decalcify Your Pineal Gland',
+    subtitle: 'And Why You Need To',
+    cover: '/images/books/pineal-gland.jpg',
+    slug: 'pineal-gland',
+    rating: 4.9,
+    reviews: 110,
   },
   {
     title: 'Heal Your Skin Naturally',
-    subtitle: 'Science-Backed Solutions for Common Skin Problems',
-    image: '/books/heal-your-skin.jpg',
-    slug: 'heal-your-skin',
+    subtitle: 'Proven Treatments for Eczema And Other Skin Conditions',
+    cover: '/images/books/heal-your-skin-naturally.jpg',
+    slug: 'heal-your-skin-naturally',
     rating: 4.9,
     reviews: 105,
   }
@@ -74,12 +77,16 @@ export default function BookSection() {
             <div className="relative h-[400px] p-8 flex items-center justify-center">
               <div className="relative w-full h-full transform group-hover:scale-105 transition-transform duration-300">
                 <Image
-                  src={book.image}
+                  src={book.cover || '/images/books/default-cover.jpg'}
                   alt={book.title}
                   fill
                   style={{ objectFit: 'contain' }}
                   priority={index < 3}
                   className="drop-shadow-xl"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.src = '/images/books/default-cover.jpg';
+                  }}
                 />
               </div>
             </div>

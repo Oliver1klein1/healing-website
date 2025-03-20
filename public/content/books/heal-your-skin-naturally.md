@@ -1,6 +1,7 @@
 ---
 title: "Heal Your Skin Naturally: Proven Treatments for Eczema and Other Common Conditions"
-image: "heal-your-skin.jpg"
+image: "heal-your-skin-naturally.jpg"
+pdfUrl: "/pdfs/heal-your-skin-preview.pdf"
 ---
 
 # Heal Your Skin Naturally: Proven Treatments for Eczema and Other Common Conditions

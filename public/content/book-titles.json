@@ -1,0 +1,39 @@
+{
+  "books": [
+    {
+      "currentTitle": "Pineal Trivia",
+      "newTitle": "101 Jaw-Dropping and Fun Facts About The Pineal Gland",
+      "subtitle": ""
+    },
+    {
+      "currentTitle": "Microbiome Trivia",
+      "newTitle": "Microbiome Trivia",
+      "subtitle": "101 Astonishing Facts About Your Gut – Your Second Brain"
+    },
+    {
+      "currentTitle": "101 Jaw-Dropping Fun Facts",
+      "newTitle": "5 Steps To Decalcify Your Pineal Gland",
+      "subtitle": "And Why You Need To"
+    },
+    {
+      "currentTitle": "Heal Your Skin Naturally",
+      "newTitle": "Heal Your Skin Naturally",
+      "subtitle": "Proven Treatments for Eczema And Other Common Skin Conditions"
+    },
+    {
+      "currentTitle": "Heal Your Gut Naturally",
+      "newTitle": "Heal Your Gut Naturally",
+      "subtitle": "17 Steps To Banish Stomach Pain, Indigestion and Bloating"
+    }, 
+    {
+      "currentTitle": "17 Steps To Combat Colds And Flu",
+      "newTitle": "17 Steps To Combat Colds And Flu",
+      "subtitle": "Using Science-Backed Natural Remedies "
+    }, 
+    {
+      "currentTitle": "7 Steps To Optimize Your Microbiome",
+      "newTitle": "7 Steps To Optimize Your Microbiome",
+      "subtitle": "And Why You Need To"
+    }, 
+  ]
+}
