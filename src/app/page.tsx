@@ -29,13 +29,13 @@ export default function Home() {
                   Bridging Science & Natural Medicine
                 </h2>
                 <div className="relative w-48 h-48 rounded-full overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300">
-              <Image
+        <Image
                     src="/dna_in_bowl.gif"
                     alt="DNA in Bowl"
                     fill
                     className="object-cover"
-                    priority
-                  />
+          priority
+        />
                 </div>
               </div>
               <p className="text-xl text-blue-100 max-w-2xl mx-auto animate-fade-in-up animation-delay-200">
@@ -131,7 +131,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-      </div>
+        </div>
         </section>
 
         {/* Newsletter Section */}

@@ -7,6 +7,7 @@ import { remark } from 'remark';
 import html from 'remark-html';
 import Features from '@/components/Features';
 import LoadingScreen from '@/components/LoadingScreen';
+import PDFViewer from '@/components/PDFViewer';
 
 // Function to get all book slugs
 export async function generateStaticParams() {
@@ -54,7 +55,8 @@ async function getBookContent(slug: string) {
     return {
       title: data.title,
       description: contentHtml,
-      image: data.image
+      image: data.image,
+      pdfUrl: data.pdfUrl
     };
   } catch (error) {
     console.error('Error reading book content:', error);
@@ -68,6 +70,8 @@ export default async function BookPage({ params }: { params: { slug: string } })
   if (!book) {
     notFound();
   }
+
+  const showPreview = params.slug === 'optimize-microbiome';
 
   return (
     <>
@@ -133,6 +137,33 @@ export default async function BookPage({ params }: { params: { slug: string } })
                     Buy Now
                   </button>
                 </div>
+
+                {/* Highlighted Excerpts */}
+                <div className="mt-8">
+                  <h2 className="text-2xl font-bold mb-6 text-gray-900">Highlighted Excerpts</h2>
+                  <div className="space-y-4">
+                    {/* Card 1 */}
+                    <div className="bg-purple-900 p-6 rounded-xl shadow-lg">
+                      <p className="text-yellow-300 text-sm md:text-base text-justify">
+                        Astonishingly, gut microbes produce many of the same chemicals that our brains use to regulate thoughts and emotions. In fact, about 90% of our body's serotonin – a key neurotransmitter for mood – is made in the gut.
+                      </p>
+                    </div>
+
+                    {/* Card 2 */}
+                    <div className="bg-purple-900 p-6 rounded-xl shadow-lg">
+                      <p className="text-yellow-300 text-sm md:text-base text-justify">
+                        Ever wonder why you crave sweets or feel hungry soon after eating? Part of the answer may lie in your gut microbes and the signals they send to your brain. The gut-brain axis is a communication highway, and microbes are active messengers on it. Gut bacteria can influence levels of appetite-regulating hormones ... This suggests that a healthy microbiome puts a check on cravings, especially for hyper-palatable "junk" foods.
+                      </p>
+                    </div>
+
+                    {/* Card 3 */}
+                    <div className="bg-purple-900 p-6 rounded-xl shadow-lg">
+                      <p className="text-yellow-300 text-sm md:text-base text-justify">
+                        One of the most striking demonstrations of the microbiome's impact on mood comes from animal studies swapping gut bacteria between individuals with very different temperaments. In a groundbreaking experiment, researchers ... essentially transferred behavioral traits along with the gut microbiota. They worked with two strains of mice: one known for being anxious and timid ..., and another that was notably calm and exploratory .... The results were astonishing: mice that received the "calm" microbiome became less anxious, while those colonized with the "anxious" microbiome became more anxious.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             
@@ -142,6 +173,24 @@ export default async function BookPage({ params }: { params: { slug: string } })
                 className="prose prose-lg max-w-none prose-headings:text-gray-900 prose-h1:text-4xl prose-h1:font-bold prose-h1:mb-8 prose-h2:text-2xl prose-h2:font-normal prose-h2:mt-8 prose-h2:mb-4 prose-p:text-gray-700 prose-p:text-lg prose-p:text-justify prose-a:text-blue-600 hover:prose-a:text-blue-700 prose-li:text-gray-700"
                 dangerouslySetInnerHTML={{ __html: book.description }}
               />
+
+              {/* PDF Preview Section */}
+              {showPreview && (
+                <div className="mt-12">
+                  <h2 className="text-2xl font-bold mb-6 text-gray-900">Preview the Book</h2>
+                  <div className="bg-purple-50 p-6 rounded-lg shadow-md mb-8">
+                    <h2 className="text-2xl font-semibold mb-4">Here's a sneak peek...</h2>
+                    <p className="text-gray-600 mb-4">
+                      Take a look at the first few pages to get a taste of what's inside.
+                    </p>
+                    {(() => {
+                      console.log('Book data:', book);
+                      return null;
+                    })()}
+                    <PDFViewer url="/books/optimize-your-microbiome-preview.pdf.pdf" />
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
