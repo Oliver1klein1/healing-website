@@ -77,27 +77,27 @@ export default function CombatColdsPage() {
                 </div>
 
                 {/* Highlighted Excerpts */}
-                <div className="mt-8">
-                  <h2 className="text-2xl font-bold mb-6 text-gray-900">Highlighted Excerpts</h2>
-                  <div className="space-y-4">
+                <div className="mt-10">
+                  <h2 className="text-2xl font-bold mb-8 text-gray-900">Highlighted Excerpts</h2>
+                  <div className="space-y-12">
                     {/* Card 1 */}
-                    <div className="bg-purple-900 p-6 rounded-xl shadow-lg">
+                    <div className="bg-purple-900 p-8 rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.25)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.35)] transition-shadow duration-300">
                       <p className="text-yellow-300 text-sm md:text-base text-justify">
-                        The COVID-19 pandemic changed everything, making us more aware than ever of the importance of immune resilience and natural health solutions.
+                        "This meta-analysis of several trials found that zinc lozenges (providing &gt;75 mg of zinc per day in divided doses) shortened colds by about 33% on average. In practical terms, people who took zinc from day 1 recovered faster – often a cold that might have lasted a week could end a couple of days sooner"
                       </p>
                     </div>
 
                     {/* Card 2 */}
-                    <div className="bg-purple-900 p-6 rounded-xl shadow-lg">
+                    <div className="bg-purple-900 p-8 rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.25)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.35)] transition-shadow duration-300">
                       <p className="text-yellow-300 text-sm md:text-base text-justify">
-                        Discover science-backed natural remedies that work with your body—rather than against it—to strengthen your immune system year-round.
+                        "Honey has been clinically proven to be as effective (if not better) than some commercial cough syrups in reducing nighttime cough in children"
                       </p>
                     </div>
 
                     {/* Card 3 */}
-                    <div className="bg-purple-900 p-6 rounded-xl shadow-lg">
+                    <div className="bg-purple-900 p-8 rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.25)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.35)] transition-shadow duration-300">
                       <p className="text-yellow-300 text-sm md:text-base text-justify">
-                        Learn how to use affordable, readily available ingredients to boost your immune system and fight off infections naturally.
+                        "A notable clinical trial found that people taking a daily garlic supplement had significantly fewer colds over 12 weeks than those taking a placebo (24 colds in the garlic group vs 65 in the placebo group)5. The garlic group also had far fewer days of illness overall"
                       </p>
                     </div>
                   </div>

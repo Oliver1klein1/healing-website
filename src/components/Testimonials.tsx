@@ -1,7 +1,7 @@
 const testimonials = [
   {
     quote: "The simple and cost-effective remedies helped me overcome my chronic digestive issues when nothing else worked. I loved the fact that almost every statement in the book has a referenced paper to back it up. Made me confidence in the treatment.",
-    author: "Sarah Thompson",
+    author: "Daniel Schwartzman",
     title: "Verified Reader"
   },
   {

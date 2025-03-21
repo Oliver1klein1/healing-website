@@ -144,27 +144,36 @@ export default async function Page({ params }: { params: { slug: string } }) {
                   </div>
 
                   {/* Highlighted Excerpts */}
-                  <div className="mt-8">
-                    <h2 className="text-2xl font-bold mb-6 text-gray-900">Highlighted Excerpts</h2>
-                    <div className="space-y-4">
+                  <div className="mt-10">
+                    <h2 className="text-2xl font-bold mb-8 text-gray-900">Highlighted Excerpts</h2>
+                    <div className="space-y-12">
                       {/* Card 1 */}
-                      <div className="bg-purple-900 p-6 rounded-xl shadow-lg">
+                      <div className="bg-purple-900 p-8 rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.25)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.35)] transition-shadow duration-300">
                         <p className="text-yellow-300 text-sm md:text-base text-justify">
-                          Astonishingly, gut microbes produce many of the same chemicals that our brains use to regulate thoughts and emotions. In fact, about 90% of our body's serotonin – a key neurotransmitter for mood – is made in the gut.
+                          {params.slug === 'combat-colds' && '"This meta-analysis of several trials found that zinc lozenges (providing &gt;75 mg of zinc per day in divided doses) shortened colds by about 33% on average. In practical terms, people who took zinc from day 1 recovered faster – often a cold that might have lasted a week could end a couple of days sooner"'}
+                          {params.slug === 'heal-your-gut' && '"The best way to handle digestive troubles is to prevent them in the first place. By making mindful lifestyle and dietary changes, you can strengthen your digestive system and avoid triggers that cause stomach pain, indigestion, and bloating"'}
+                          {params.slug === 'heal-your-skin' && '"Pharmaceutical companies fund a huge amount of medical research, education, and marketing... There is a well-documented publication bias in favor of positive drug trial results – studies sponsored by drug companies are much more likely to report outcomes favoring the sponsor\'s product. In contrast, who funds research on broccoli extract or fish oil for skin health? Such studies are often small and grant-funded, with no big-budget industry pushing the results into conferences or medical journals. This imbalance means natural therapies don\'t get the same spotlight."'}
+                          {params.slug === 'optimize-microbiome' && '"Astonishingly, gut microbes produce many of the same chemicals that our brains use to regulate thoughts and emotions. In fact, about 90% of our body\'s serotonin – a key neurotransmitter for mood – is made in the gut."'}
                         </p>
                       </div>
 
                       {/* Card 2 */}
-                      <div className="bg-purple-900 p-6 rounded-xl shadow-lg">
+                      <div className="bg-purple-900 p-8 rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.25)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.35)] transition-shadow duration-300">
                         <p className="text-yellow-300 text-sm md:text-base text-justify">
-                          Ever wonder why you crave sweets or feel hungry soon after eating? Part of the answer may lie in your gut microbes and the signals they send to your brain. The gut-brain axis is a communication highway, and microbes are active messengers on it.
+                          {params.slug === 'combat-colds' && '"Honey has been clinically proven to be as effective (if not better) than some commercial cough syrups in reducing nighttime cough in children"'}
+                          {params.slug === 'heal-your-gut' && '"If you have IBS (Irritable Bowel Syndrome) or chronic bloating and pain that hasn\'t responded to basic diet tweaks, you might benefit from a structured elimination diet like the Low-FODMAP diet. FODMAPs are certain types of carbohydrates... that can be hard to digest and tend to ferment in the gut, causing gas and bloating"'}
+                          {params.slug === 'heal-your-skin' && '"In a clinical trial on children with eczema, topical virgin coconut oil for 8 weeks dramatically improved skin moisture and reduced disease severity. The average eczema score (SCORAD) dropped by 68%, far better than the 38% drop with mineral oil. Importantly, measurements of transepidermal water loss (TEWL) – a marker of barrier leakage – fell significantly in the coconut oil group, indicating a stronger, more sealed barrier."'}
+                          {params.slug === 'optimize-microbiome' && '"Ever wonder why you crave sweets or feel hungry soon after eating? Part of the answer may lie in your gut microbes and the signals they send to your brain. The gut-brain axis is a communication highway, and microbes are active messengers on it."'}
                         </p>
                       </div>
 
                       {/* Card 3 */}
-                      <div className="bg-purple-900 p-6 rounded-xl shadow-lg">
+                      <div className="bg-purple-900 p-8 rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.25)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.35)] transition-shadow duration-300">
                         <p className="text-yellow-300 text-sm md:text-base text-justify">
-                          One of the most striking demonstrations of the microbiome's impact on mood comes from animal studies swapping gut bacteria between individuals with very different temperaments.
+                          {params.slug === 'combat-colds' && '"A notable clinical trial found that people taking a daily garlic supplement had significantly fewer colds over 12 weeks than those taking a placebo (24 colds in the garlic group vs 65 in the placebo group)5. The garlic group also had far fewer days of illness overall"'}
+                          {params.slug === 'heal-your-gut' && '"Nature has provided us with wonderful herbs that can calm an upset stomach. Three of the best herbal teas for digestion are peppermint, chamomile, and ginger."'}
+                          {params.slug === 'heal-your-skin' && '"In a 12-week randomized trial, young men put on a low-glycemic-load diet had a significantly greater reduction in acne lesions than those on a regular high-carb diet (average 23 fewer pimples vs. 12 fewer in the control group). They also showed improved insulin sensitivity, highlighting how diet and hormones impact skin"'}
+                          {params.slug === 'optimize-microbiome' && '"One of the most striking demonstrations of the microbiome\'s impact on mood comes from animal studies swapping gut bacteria between individuals with very different temperaments."'}
                         </p>
                       </div>
                     </div>
