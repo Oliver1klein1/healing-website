@@ -79,27 +79,27 @@ export default function HealYourGutPage() {
                 </div>
 
                 {/* Highlighted Excerpts */}
-                <div className="mt-8">
-                  <h2 className="text-2xl font-bold mb-6 text-gray-900">Highlighted Excerpts</h2>
-                  <div className="space-y-4">
+                <div className="mt-10">
+                  <h2 className="text-2xl font-bold mb-8 text-gray-900">Highlighted Excerpts</h2>
+                  <div className="space-y-12">
                     {/* Card 1 */}
-                    <div className="bg-purple-900 p-6 rounded-xl shadow-lg">
+                    <div className="bg-purple-900 p-8 rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.25)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.35)] transition-shadow duration-300">
                       <p className="text-yellow-300 text-sm md:text-base text-justify">
-                        Your gut health holds the key to your overall well-being. Modern research shows that healing your gut naturally is not only possible but often more effective than conventional treatments.
+                        "The best way to handle digestive troubles is to prevent them in the first place. By making mindful lifestyle and dietary changes, you can strengthen your digestive system and avoid triggers that cause stomach pain, indigestion, and bloating"
                       </p>
                     </div>
 
                     {/* Card 2 */}
-                    <div className="bg-purple-900 p-6 rounded-xl shadow-lg">
+                    <div className="bg-purple-900 p-8 rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.25)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.35)] transition-shadow duration-300">
                       <p className="text-yellow-300 text-sm md:text-base text-justify">
-                        Simple, natural remedies can often resolve digestive issues that medications only mask. The key is understanding the root causes and supporting your body's healing processes.
+                        "If you have IBS (Irritable Bowel Syndrome) or chronic bloating and pain that hasn't responded to basic diet tweaks, you might benefit from a structured elimination diet like the Low-FODMAP diet. FODMAPs are certain types of carbohydrates... that can be hard to digest and tend to ferment in the gut, causing gas and bloating"
                       </p>
                     </div>
 
                     {/* Card 3 */}
-                    <div className="bg-purple-900 p-6 rounded-xl shadow-lg">
+                    <div className="bg-purple-900 p-8 rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.25)] hover:shadow-[0_8px_24px_rgba(0,0,0,0.35)] transition-shadow duration-300">
                       <p className="text-yellow-300 text-sm md:text-base text-justify">
-                        Western herbal remedies, when properly used, can restore balance to your gut microbiome and provide lasting relief from digestive distress.
+                        "Nature has provided us with wonderful herbs that can calm an upset stomach. Three of the best herbal teas for digestion are peppermint, chamomile, and ginger."
                       </p>
                     </div>
                   </div>

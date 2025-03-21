@@ -111,13 +111,9 @@ export default function CombatColdsPage() {
                 <h1>{book.title}</h1>
                 <p className="text-xl">By Dr. Michael Klein, MD</p>
 
-                <p className="font-semibold">ATTENTION:</p>
                 <p>Are you tired of constantly battling colds and flu, spending money on over-the-counter medications that only mask symptoms?</p>
 
                 <p>The COVID-19 pandemic changed everything, making us more aware than ever of the importance of immune resilience and natural health solutions. Now, more than ever, people are searching for safe, effective, and affordable ways to prevent and manage viral infections-without the side effects of pharmaceuticals.</p>
-
-                <p className="font-semibold">INTEREST:</p>
-                <p>Discover a doctor's science-backed approach to cold and flu relief using natural remedies that actually work.</p>
 
                 <p>In this practical, easy-to-follow guide, Dr. Michael Klein-medical doctor and former pharmaceutical researcher-shares 17 evidence-based steps to prevent and combat colds and flu at home. With over 20 years of experience in pharma and research, Dr. Klein blends scientific data with time-tested wisdom to help you:</p>
 
@@ -129,8 +125,7 @@ export default function CombatColdsPage() {
                   <li>Know when to seek medical care-and when you can safely heal at home</li>
                 </ul>
 
-                <p className="font-semibold">DESIRE:</p>
-                <p>This book is for you if you want to:</p>
+                <p>This book is perfect for anyone who wants to:</p>
                 <ul>
                   <li>Take control of your health and reduce your reliance on expensive medications</li>
                   <li>Protect yourself and your family with natural, research-supported remedies</li>
@@ -138,10 +133,20 @@ export default function CombatColdsPage() {
                   <li>Save money by using affordable, readily available ingredients</li>
                 </ul>
 
-                <p className="font-semibold">ACTION:</p>
                 <p>Don't wait until the next flu season to start protecting your health!</p>
 
-                <p>Equip yourself with trusted, doctor-approved solutions that work with your body-rather than against it. Get your copy of 17 Steps to Combat Colds and Flu Using Science-Backed Natural Remedies today and start feeling better, faster!</p>
+                <p>Equip yourself with trusted, doctor-approved solutions that work with your body-rather than against it. These science-backed natural remedies will help you prevent and overcome colds and flu more effectively, while supporting your body's natural healing abilities.</p>
+
+                <h2>What Makes This Guide Different</h2>
+                <ul>
+                  <li>Evidence-based natural solutions that actually work</li>
+                  <li>Clear, practical steps you can implement immediately</li>
+                  <li>Cost-effective remedies using readily available ingredients</li>
+                  <li>Safe protocols for both prevention and treatment</li>
+                  <li>Expert guidance on when to seek medical care</li>
+                </ul>
+
+                <p>Start building your natural defense system today with proven strategies that strengthen your immunity and help you stay healthy year-round.</p>
               </article>
 
               {/* PDF Preview Section */}
