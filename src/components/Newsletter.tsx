@@ -25,8 +25,8 @@ export default function Newsletter() {
     <section className="py-16 bg-primary text-white">
       <div className="container">
         <div className="max-w-2xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4">Subscribe to Dr. Klein's Weekly Newsletter</h2>
-          <p className="text-lg mb-8 text-blue-100">"Latest Advances in Health and Longevity"</p>
+          <h2 className="text-2xl font-bold mb-4 text-gray-900">Subscribe to Dr. Klein's Weekly Newsletter</h2>
+          <p className="text-gray-600 mb-6">Latest Advances in Health and Longevity Research</p>
           
           <form onSubmit={handleSubmit} className="max-w-md mx-auto">
             <div className="flex flex-col sm:flex-row gap-4">

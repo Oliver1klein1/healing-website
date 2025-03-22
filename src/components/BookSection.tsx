@@ -46,18 +46,19 @@ const books = [
     reviews: 95,
   },
   {
-    title: '5 Steps To Decalcify Your Pineal Gland',
-    subtitle: 'And Why You Need To',
+    title: 'Five Steps to Decalcify Your Pineal Gland - And Why You Need To',
+    subtitle: '',
     cover: '/images/books/pineal-gland.jpg',
-    slug: 'pineal-gland',
+    slug: 'decalcify-pineal',
     rating: 4.9,
     reviews: 110,
+    description: 'Unlock your pineal gland\'s full potential with these five science-backed steps.'
   },
   {
     title: 'Heal Your Skin Naturally',
     subtitle: 'Proven Treatments for Eczema And Other Skin Conditions',
     cover: '/images/books/heal-your-skin-naturally.jpg',
-    slug: 'heal-your-skin-naturally',
+    slug: 'heal-your-skin',
     rating: 4.9,
     reviews: 105,
   }

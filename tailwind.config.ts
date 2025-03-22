@@ -12,6 +12,8 @@ const config: Config = {
         'gradient-orb-1': 'gradient-orb-1 15s linear infinite',
         'gradient-orb-2': 'gradient-orb-2 20s linear infinite',
         'gradient-orb-3': 'gradient-orb-3 18s linear infinite',
+        'fade-in-up': 'fadeInUp 0.5s ease-out',
+        'glow': 'glow 2s ease-in-out infinite alternate',
       },
       keyframes: {
         'gradient-orb-1': {
@@ -35,10 +37,30 @@ const config: Config = {
           '75%': { transform: 'translate(-50%, -50%) rotate(270deg) scale(1.5)' },
           '100%': { transform: 'translate(-50%, -50%) rotate(360deg) scale(1)' },
         },
+        fadeInUp: {
+          '0%': {
+            opacity: '0',
+            transform: 'translateY(10px)',
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateY(0)',
+          },
+        },
+        glow: {
+          '0%': {
+            opacity: '0.4',
+            transform: 'scale(0.8)',
+          },
+          '100%': {
+            opacity: '0.8',
+            transform: 'scale(1.2)',
+          },
+        },
       },
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography')],
 };
 
 export default config; 

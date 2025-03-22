@@ -6,7 +6,7 @@ pdfUrl: "/pdfs/microbiome-trivia-preview.pdf"
 
 # Microbiome Trivia: 150 Astonishing Facts About Your Gut - Your Second Brain
 
-By Dr Michael Klein
+By Dr Michael Klein, MD
 
 Did you know that your gut contains trillions of microbes that influence everything from your mood to your immune system? Or that your gut bacteria may outnumber your own human cells? The mysteries of the microbiome are stranger-and more powerful-than you ever imagined!
 
@@ -21,4 +21,4 @@ With engaging trivia, jaw-dropping scientific discoveries, and fascinating scien
 
 Are you ready to unlock the secrets of your hidden microbial world?
 
-[Buy Now](#) and discover how your gut is shaping your life in ways you never imagined! 
+Grab your copy today and discover how your gut is shaping your life in ways you never imagined! 

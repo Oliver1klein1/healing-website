@@ -1,15 +1,37 @@
-'use client';
-
 import Image from 'next/image';
 import LoadingScreen from '@/components/LoadingScreen';
 import PDFViewer from '@/components/PDFViewer';
+import fs from 'fs';
+import path from 'path';
+import matter from 'gray-matter';
+import { remark } from 'remark';
+import html from 'remark-html';
 
-export default function PinealTriviaPage() {
+async function getBookContent(filename: string): Promise<string> {
+  const contentDirectory = path.join(process.cwd(), 'src/content/books');
+  const fullPath = path.join(contentDirectory, filename);
+  const fileContents = fs.readFileSync(fullPath, 'utf8');
+
+  // Use gray-matter to parse the post metadata section
+  const { content } = matter(fileContents);
+
+  // Use remark to convert markdown into HTML string
+  const processedContent = await remark()
+    .use(html)
+    .process(content);
+
+  return processedContent.toString();
+}
+
+export default async function PinealTriviaPage() {
   const book = {
     title: "101 Jaw-Dropping and Fun Facts About the Pineal Gland",
     image: "pineal-trivia.jpg",
-    pdfUrl: "/pdfs/pineal-trivia-preview.pdf"
+    pdfUrl: "/pdfs/pineal-trivia-preview.pdf",
+    contentFile: "pineal-trivia.md"
   };
+
+  const content = await getBookContent(book.contentFile);
 
   return (
     <>
@@ -71,61 +93,48 @@ export default function PinealTriviaPage() {
                 
                 {/* Buy Now Button */}
                 <div className="mt-6 md:mt-8 text-center">
-                  <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 md:px-8 py-3 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-[1.02] transition-all duration-300">
-                    Buy Now
+                  <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 md:px-8 py-3 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-[1.02] transition-all duration-300 animate-pulse hover:animate-none relative">
+                    <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-400 to-purple-400 opacity-75 blur-lg group-hover:opacity-100 animate-glow"></div>
+                    <span className="relative z-10">Buy Now</span>
                   </button>
-                </div>
-
-                {/* Highlighted Excerpts */}
-                <div className="mt-8">
-                  <h2 className="text-2xl font-bold mb-6 text-gray-900">Highlighted Excerpts</h2>
-                  <div className="space-y-4">
-                    {/* Card 1 */}
-                    <div className="bg-purple-900 p-6 rounded-xl shadow-lg">
-                      <p className="text-yellow-300 text-sm md:text-base text-justify">
-                        Did you know the pineal gland has the second-highest blood flow of any organ in your body? Ancient philosophers believed it was the "seat of the soul."
-                      </p>
-                    </div>
-
-                    {/* Card 2 */}
-                    <div className="bg-purple-900 p-6 rounded-xl shadow-lg">
-                      <p className="text-yellow-300 text-sm md:text-base text-justify">
-                        The pineal gland's influence extends far beyond sleep regulation—it plays a crucial role in aging, consciousness, and even spiritual experiences.
-                      </p>
-                    </div>
-
-                    {/* Card 3 */}
-                    <div className="bg-purple-900 p-6 rounded-xl shadow-lg">
-                      <p className="text-yellow-300 text-sm md:text-base text-justify">
-                        Modern science is uncovering surprising connections between the pineal gland and human potential that ancient cultures somehow knew about thousands of years ago.
-                      </p>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
             
             {/* Right Column - Book Content */}
             <div className="md:w-2/3">
-              <article className="prose prose-lg max-w-none prose-headings:text-gray-900 prose-h1:text-4xl prose-h1:font-bold prose-h1:mb-8 prose-h2:text-2xl prose-h2:font-normal prose-h2:mt-8 prose-h2:mb-4 prose-p:text-gray-700 prose-p:text-lg prose-p:text-justify prose-a:text-blue-600 hover:prose-a:text-blue-700 prose-li:text-gray-700">
-                <h1>{book.title}</h1>
-
-                <p>Did you know the pineal gland has the second-highest blood flow of any organ in your body? Or that ancient philosophers believed it was the "seat of the soul"? Hidden deep within your brain, this tiny pinecone-shaped gland has been at the center of scientific discovery, spiritual speculation, and even wild conspiracy theories.</p>
-
-                <p>In 101 Jaw-Dropping and Fun Facts About the Pineal Gland, you'll explore the fascinating world of this mysterious organ-its role in sleep, its connection to ancient mysticism, and the cutting-edge science revealing its influence on health, aging, and even consciousness itself. Packed with incredible trivia, surprising research, and mind-expanding insights, this book makes learning about the pineal gland as exciting as it is enlightening.</p>
-
-                <h2>Whether you're a science enthusiast, a health-conscious reader, or someone intrigued by the unexplored powers of the human brain, this book will keep you hooked from cover to cover. Discover:</h2>
-
-                <ul>
-                  <li>How the pineal gland regulates your biological clock</li>
-                  <li>The strange truth about pineal gland calcification</li>
-                  <li>Ancient and modern beliefs about the "third eye"</li>
-                  <li>Groundbreaking research on melatonin, health, and longevity</li>
-                  <li>And dozens more astonishing, little-known facts!</li>
-                </ul>
-
-                <p>If you love learning about the hidden wonders of the human body, this book is a must-read.</p>
+              <article className="prose prose-lg max-w-none">
+                <div className="text-lg text-gray-700 space-y-6">
+                  <div dangerouslySetInnerHTML={{ __html: content }} />
+                </div>
               </article>
+
+              {/* Highlighted Excerpts */}
+              <div className="mt-12">
+                <h2 className="text-2xl font-bold mb-6 text-gray-900">Highlighted Excerpts</h2>
+                <div className="space-y-4">
+                  {/* Card 1 */}
+                  <div className="bg-purple-900 p-6 rounded-xl shadow-lg">
+                    <p className="text-yellow-300 text-sm md:text-base text-justify">
+                      Epidemiological studies have found that long-term night shift workers have increased rates of certain cancers (like breast cancer) and other health issues.
+                    </p>
+                  </div>
+
+                  {/* Card 2 */}
+                  <div className="bg-purple-900 p-6 rounded-xl shadow-lg">
+                    <p className="text-yellow-300 text-sm md:text-base text-justify">
+                      The pineal gland's influence extends far beyond sleep regulation—it plays a crucial role in aging, consciousness, and even spiritual experiences.
+                    </p>
+                  </div>
+
+                  {/* Card 3 */}
+                  <div className="bg-purple-900 p-6 rounded-xl shadow-lg">
+                    <p className="text-yellow-300 text-sm md:text-base text-justify">
+                      Modern science is uncovering surprising connections between the pineal gland and human potential that ancient cultures somehow knew about thousands of years ago.
+                    </p>
+                  </div>
+                </div>
+              </div>
 
               {/* PDF Preview Section */}
               <div className="mt-12">

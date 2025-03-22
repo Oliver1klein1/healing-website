@@ -4,6 +4,7 @@ import Newsletter from '@/components/Newsletter';
 import Testimonials from '@/components/Testimonials';
 import { BackgroundGradientAnimation } from '@/components/ui/background-gradient-animation';
 import LoadingScreen from '@/components/LoadingScreen';
+import { Particles } from '@/components/ui/particles';
 
 export default function Home() {
   return (
@@ -98,44 +99,69 @@ export default function Home() {
         <Testimonials />
 
         {/* About Section with Modern Layout */}
-        <section className="py-16 bg-white relative overflow-hidden">
+        <section className="py-16 bg-white relative">
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-16 items-center">
-              <div className="relative h-[300px] w-[250px] mx-auto rounded-2xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-500">
-            <Image
-                  src="/doctor-hero.jpeg"
-                  alt="Dr. Michael Klein"
-                  fill
-                  style={{ objectFit: 'cover' }}
-                  className="rounded-2xl"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-blue-900/40 to-transparent"></div>
+              <div className="flex justify-center">
+                <div className="relative h-[400px] w-[300px] rounded-2xl overflow-hidden shadow-2xl transform hover:scale-[1.02] transition-transform duration-500">
+                  <Image
+                    src="/doctor-hero.jpeg"
+                    alt="Dr. Michael Klein"
+                    fill
+                    style={{ objectFit: 'cover' }}
+                    className="rounded-2xl"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-blue-900/40 to-transparent"></div>
+                </div>
               </div>
               <div className="space-y-6">
-                <h2 className="text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
-                  A Bit About Me...
-                </h2>
-                <div className="prose prose-lg max-w-none">
-                  <p className="mb-4 text-gray-700 text-justify">
-                    Hi. I'm a medical doctor and business executive with over two decades of experience in pharmaceutical research spanning Africa, Asia, and Australia. Throughout my career, I've had the privilege of living and working in South Africa, Australia, and Singapore, where my three wonderful children were born.
-                  </p>
-                  <p className="mb-4 text-gray-700 text-justify">
-                    Having served on African, Asian, and European boards of multinational pharmaceutical companies, much of my professional journey involved diving deep into data and extracting valuable insights from countless clinical trials. This unique vantage point gave me firsthand exposure to both the extraordinary benefits and notable limitations of modern medicine.
-                  </p>
-                  <p className="mb-4 text-gray-700 text-justify">
-                    While pharmaceuticals undoubtedly save lives, I've come to recognize that complex, costly medications aren't always necessary or accessible for everyone. In fact, many everyday health challenges can be addressed effectively using simple, affordable natural remedies that have endured through generations.
-                  </p>
-                  <p className="text-gray-700 text-justify">
-                    Inspired by the needs of busy, budget-conscious families (and the naturally curious!), my mission is to sift through the vast sea of scientific research and translate it into clear, practical guidance. This series of books is designed to deliver quick, effective, science-backed solutions to common health issues—helping you and your family achieve optimal wellness naturally, without breaking the bank.
-                  </p>
+                <div className="bg-white p-8 rounded-2xl shadow-lg">
+                  <h2 className="text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">
+                    A Bit About Me...
+                  </h2>
+                  <div className="prose prose-lg max-w-none">
+                    <p className="mb-4 text-gray-700 text-justify">
+                      Hi. I'm a medical doctor and business executive with close to three decades of experience in pharmaceutical research. I've had the privilege of living and working in South Africa, Australia, and Singapore, where my three wonderful children were born.
+                    </p>
+                    <p className="mb-4 text-gray-700 text-justify">
+                      It was my honor to serve on the African, Asian, and European boards of various multinational pharmaceutical companies. Much of my professional journey involved diving deep into data and extracting valuable insights from clinical trials.
+                    </p>
+                    <p className="mb-4 text-gray-700 text-justify">
+                      This unique vantage point gave me firsthand exposure to both the extraordinary benefits and notable limitations of modern medicine.
+                    </p>
+                    <p className="mb-4 text-gray-700 text-justify">
+                      While pharmaceuticals undoubtedly save lives, I've come to recognize that complex, costly medications aren't always necessary or accessible for everyone. In fact, many everyday health challenges can be addressed effectively using simple, affordable natural remedies that have endured through generations.
+                    </p>
+                    <p className="mb-4 text-gray-700 text-justify">
+                      Inspired by the needs of busy, budget-conscious families (and the naturally curious!), my mission is to sift through the vast sea of scientific research and translate it into clear, practical guidance. This series of books is designed to deliver quick, effective, science-backed solutions to common health issues—helping you and your family achieve optimal wellness naturally, without breaking the bank.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
-        </div>
+          </div>
         </section>
 
         {/* Newsletter Section */}
-        <Newsletter />
+        <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-8 rounded-2xl shadow-lg">
+          <div className="text-center">
+            <h2 className="text-2xl font-bold mb-4 text-gray-900">Subscribe to Dr. Klein's Weekly Newsletter</h2>
+            <p className="text-gray-600 mb-6">Latest Advances in Health and Longevity Research</p>
+            <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="flex-1 px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500"
+              />
+              <button
+                type="submit"
+                className="bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition-colors duration-300"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
       </main>
     </>
   );

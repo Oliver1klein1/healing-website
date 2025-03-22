@@ -6,7 +6,7 @@ pdfUrl: "/pdfs/heal-your-gut-preview.pdf"
 
 # Heal Your Gut Naturally: 17 Steps to Banish Pain, Indigestion, and Bloating
 
-By Dr. Michael Klein
+By Dr. Michael Klein, MD
 
 Do you constantly suffer from stomach pain, bloating, or indigestion? Have you tried medication after medication, only to find temporary relief? Your gut health holds the key to your overall well-being-and healing it naturally is easier than you think!
 
@@ -24,4 +24,4 @@ Backed by peer-reviewed science and free from complex pharmaceutical jargon, thi
 
 If you're ready to banish stomach pain, ease bloating, and take charge of your digestive health-without expensive treatments or restrictive diets-then this book is your roadmap to lasting relief.
 
-[Buy Now](#) and start your journey to better gut health today!
+Scroll up and grab your copy today!
